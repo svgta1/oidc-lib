@@ -42,7 +42,7 @@ class OidcSession
     if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_NONE) {
       session_start();
     }
-    if(!isset($_SESSION['SvgtaOidcClient']))
+    if(!isset($_SESSION[self::$name]))
       $_SESSION[self::$name] = [];
   }
 

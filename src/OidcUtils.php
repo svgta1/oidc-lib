@@ -43,9 +43,10 @@ class OidcUtils
       $hash = self::base64url_encode(substr(hash('sha' . $bit, $string, true), 0, $len));
       return $hash;
     }
-    public static function genRsaKey(int $len = 2048): array{
+    public static function genRsaKey(int $len = 2048, array $options = []): array{
       $pKey = JWKFactory::createRSAKey(
-        $len
+        $len,
+        $options
       );
       $ar = [
         'JWK' => [
@@ -59,9 +60,10 @@ class OidcUtils
       ];
       return $ar;
     }
-    public static function genEcKey(string $curv = 'P-256'): array{
+    public static function genEcKey(string $curv = 'P-256', array $options = []): array{
       $pKey = JWKFactory::createECKey(
-        $curv
+        $curv,
+        $options
       );
       $ar = [
         'JWK' => [

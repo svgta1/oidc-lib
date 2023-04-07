@@ -60,7 +60,7 @@ class OidcJWT
     'none' => ['none']
   ];
 
-  private static $conv_key_className = [
+  public static $conv_key_className = [
     'A128KW' => 'A128KW',
     'A192KW' => 'A192KW',
     'A256KW' => 'A256KW',
@@ -78,7 +78,7 @@ class OidcJWT
     'RSA-OAEP' => 'RSAOAEP',
     'RSA-OAEP-256' => 'RSAOAEP256',
   ];
-  private static $conv_enc_className = [
+  public static $conv_enc_className = [
     'A128GCM' => 'A128GCM',
     'A192GCM' => 'A192GCM',
     'A256GCM' => 'A256GCM',

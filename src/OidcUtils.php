@@ -152,7 +152,7 @@ class OidcUtils
       if(!isset(self::$logConvLevel[$level]))
         throw new Exception('Log level not known');
       if(self::$logLevel >= $level){
-          $msg = PHP_EOL . 'Svgta\OidcClient ' . self::$logConvLevel[$level] . ': ';
+          $msg = 'Svgta Lib ' . self::$logConvLevel[$level] . ': ';
           if(is_string($message))
             $msg .= $message;
           if(is_array($message) && isset($message['logMsg']))
